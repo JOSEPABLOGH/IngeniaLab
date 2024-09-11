@@ -1,0 +1,423 @@
+/*----------Contenido general de la pagina----------*/
+
+body {
+
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    display: flex;
+
+}
+
+.main-content {
+
+    padding: 20px;
+    width: calc(100% - 250px);
+
+}
+
+#main-content {
+    margin-left: 100px;
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+#main-content.expanded {
+    margin-left: 200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-button {
+
+    background: #4c6ef5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+
+}
+
+.add-button:hover {
+background: #3b5bdb;
+}
+
+.search-bar {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.search-bar input {
+width: 80%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.search-button {
+background: #4c6ef5;
+color: #fff;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 5px;
+transition: background 0.3s;
+}
+
+.search-button:hover {
+background: #3b5bdb;
+}
+
+.user-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.user-table td {
+    text-align: center; /* Alinea horizontalmente al centro */
+    vertical-align: middle; /* Alinea verticalmente al centro */
+}
+
+.user-table td svg, .user-table td i {
+    vertical-align: middle;
+}
+
+.user-table thead {
+background: #f1f3f5;
+}
+
+.user-table th, .user-table td {
+padding: 15px;
+text-align: left;
+border-bottom: 1px solid #dee2e6;
+}
+
+.user-table th {
+background: #e9ecef;
+}
+
+.user-table tr:hover {
+background: #f1f3f5;
+}
+
+.edit-button, .delete-button, .details-button {
+background: #4c6ef5;
+color: #fff;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 5px;
+margin-right: 5px;
+transition: background 0.3s;
+}
+
+.power-on-button {
+
+    font-size: 12px; /* Tamaño de la letra */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    outline: none; /* Remover el borde de enfoque */
+
+    width: 150px; /* Ancho fijo */
+    height: 50px; /* Altura fija */
+    display: inline-block; /* Asegura que se aplican las dimensiones */
+    box-sizing: border-box; /* Incluye el padding y border dentro de la dimensión especificada */
+
+
+    color: white;
+    background: green;
+
+}
+
+.power-off-button {
+
+    font-size: 12px; /* Tamaño de la letra */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    outline: none; /* Remover el borde de enfoque */
+
+    width: 150px; /* Ancho fijo */
+    height: 50px; /* Altura fija */
+    display: inline-block; /* Asegura que se aplican las dimensiones */
+    box-sizing: border-box; /* Incluye el padding y border dentro de la dimensión especificada */
+
+
+    color: white;
+    background: red;
+
+}
+
+.edit-button:hover, .delete-button:hover {
+background: #3b5bdb;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/*---------- Vista tipo tarjetas ----------*/
+
+.machine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.machine-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.machine-card h3 {
+    margin-top: 0;
+}
+
+.machine-card p {
+    color: #666;
+    font-size: 16px;
+}
+
+.machine-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Ajusta este valor según el tamaño deseado */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+/*----------Contenido ----------*/
+
+/* Estilos generales para el modal */
+.modal {
+
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); /* Fondo negro con opacidad al 50% */
+  
+  }
+
+.modalAdd-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+  
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Animación */
+@-webkit-keyframes animarsuperior {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+@keyframes animarsuperior {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+  
+.btn-accept, .btn-cancel {
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.btn-accept {
+background-color: #28a745;
+color: white;
+}
+
+.btn-accept:hover {
+background-color: #218838;
+}
+
+.btn-cancel {
+background-color: #dc3545;
+color: white;
+}
+
+.btn-cancel:hover {
+background-color: #c82333;
+}
+
+.modalAdd-content p {
+color: green; /* o red, dependiendo del tipo de mensaje */
+font-size: 16px;
+padding: 10px;
+}
+
+.modalDetails-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modalDetails-content p {
+    color: black; /* o red, dependiendo del tipo de mensaje */
+    font-size: 16px;
+    padding: 10px;
+    }
+
+/* Estilos para el botón de cerrar (X) */
+.close {
+
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Estilos para el botón de cancelar */
+.cancel-btn {
+
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/*----------Ventana modal de Editar----------*/
+
+.modalEdit {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modalEdit-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Agrega esto a tus estilos existentes */
+.sidebar + #main-content {
+    margin-left: 5vw; 
+    transition: margin-left var(--transition-speed);
+    padding: 1rem;
+}
+
+.sidebar.expanded {
+    width: 200px; 
+
+}
+
+sidebar.expanded + #main-content {
+    margin-left: 200px;
+}
+
+.machine-details {
+    text-align: center;
+}
+
+.machine-image-details {
+    width: 100%;
+    max-width: 300px; /* Ajusta este valor según el tamaño deseado */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.machine-details p {
+    text-align: left;
+}
+
+.right-align {
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos del contenedor a la derecha */
+    gap: 10px; /* Espacio entre los botones */
+}

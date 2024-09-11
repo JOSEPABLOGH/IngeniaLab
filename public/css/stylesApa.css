@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+.parent {
+  display: flex;
+  justify-content: space-between;
+  /* Adjust alignment as needed */
+  align-items: center;
+  /* Align items vertically in the center */
+  height: 100vh;
+  width: 100vw;
+  /* Full height of the viewport */
+}
+
+.child1 {
+  height: 100%;
+  width: 20%;
+  /* Adjust as needed for sidebar width */
+  background-color: #E3E0E0;
+  color: black;
+  padding: 20px;
+
+}
+
+.child2 {
+  height: 100%;
+  width: 80%;
+  /* Adjust as needed for main content width */
+  padding: 20px;
+}
+
+
+#tableApartar {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tdApartar {
+  border: 0px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}

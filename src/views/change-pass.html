@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sistema de Laboratorios</title>
+        <meta name="description" content="Sistema de gestion del material de laboratorio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/TC2005B_602_01/IngeniaLab/public/css/verify.css">
+    </head>
+    <table>
+        <tr>
+        <td>
+          <img src="/TC2005B_602_01/IngeniaLab/public/assets/images/ITESM Logo.png" width="100" alt="ITESM Logo">
+        </td>
+        <td>
+          <h1>Laboratorio de Ingenieria</h1>
+        </td>
+      </tr>
+    </table>
+    <form action="/TC2005B_602_01/IngeniaLab/src/login/change-pass.php" method="POST">
+        <table align="center">
+            <tr align="center">
+                <td>
+                    <h2>
+                    Ingrese su correo nuevamente: 
+                    </h2>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <input type="text" id="username" name="username" placeholder="Correo" required>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h2>
+                    Ingrese la nueva contrseña:
+                    </h2>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <input type="password" id="password1" name="password1" placeholder="Nueva contraseña" required>
+                </td>
+            </tr>
+            <tr margin-bottom="15px" align="center">
+                <td>
+                    <h2>
+                    Confirma la contraseña:
+                    </h2>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <input type="password" id="password2" name="password2" placeholder="Nueva contraseña" required>
+                </td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr align="center">
+                <td>
+                    <button type="submit" style="padding: 10px 20px; font-size: 16px" margin-top="30px">
+                        Cambiar
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</html>

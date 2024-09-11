@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sistema de Laboratorios</title>
+        <meta name="description" content="Sistema de gestion del material de laboratorio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href= "/TC2005B_602_01/IngeniaLab/public/css/verify.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <img src="/TC2005B_602_01/IngeniaLab/public/assets/images/ITESM Logo SF.png" width="100" alt="ITESM Logo">
+                </td>
+                <td>
+                    <h1>Laboratorio de Ingenieria</h1>
+                </td>
+            </tr>
+        </table>
+        <form action="/TC2005B_602_01/IngeniaLab/src/login/verify.php" method="POST">
+            <table align="center">
+                <tr align="center">
+                    <td>
+                        <h2>
+                            Ingrese su correo
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <input type="text" id="username" name="username" placeholder="Correo" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button type="submit" style="padding: 10px 20px; font-size: 16px">
+                            Siguiente
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

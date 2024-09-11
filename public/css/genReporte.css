@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #003FBA;
+
+}
+
+.heading-admin {
+    position: fixed; /* Fija la posición */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    background-color: #003FBA; /* Añade un fondo si es necesario */
+    padding: 10px; /* Añade un poco de espacio alrededor del texto */
+    padding-left: 60px;
+    z-index: -1000; /* Asegura que el encabezado se mantenga encima de otros elementos */
+}
+
+.heading-admin .header {
+    margin: 0; /* Remueve el margen por defecto del párrafo */
+    color: white; /* Cambia el color del texto si es necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    font-weight: 600; /* Aumenta el grosor del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .form {
+    margin-top: 20px ;
+}
+
+.form -input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label {
+    color: #333;
+}
+
+.form .input-box input{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+
+
+@media screen and (max-width: 500px){
+    .form .column{
+        flex-wrap: wrap;
+    }
+}
+
+.button.container {
+    display: flex;
+}
+
+button {
+    background-color: #002D87;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+  /* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
